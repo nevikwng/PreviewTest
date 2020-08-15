@@ -1,0 +1,35 @@
+$primaryColour: #00acee;
+$secondaryColour: rgb(177, 177, 177);
+
+.AccountTypeImg{
+  width: 250px;
+  }
+.AccountImgfigure{
+  list-style: none;
+  border: 2px solid $secondaryColour;
+  border-radius: 6.5px;
+  padding: 5px;
+  margin: 20px ;
+  position: relative;
+figcaption{
+  margin-bottom: 10px;
+  color: $secondaryColour;
+  }
+  .AccountTypeCheckCircle{
+    position: absolute;
+    right: 0px;
+    bottom: -5px;
+    transform: translate(50%,50%);
+  
+  }
+}
+.AccountImgfigureClick{
+  border: 2px solid $primaryColour;
+}
+figure:hover{
+  border: 2px solid $primaryColour;
+  figcaption{
+    color: #000;
+  }
+}
+
