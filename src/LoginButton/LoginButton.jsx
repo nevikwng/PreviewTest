@@ -16,14 +16,18 @@ const LoginButton = ({ accountPwd, accountEmail }) => {
     accountpwdAarray.forEach((i) => {
       accountEmailAarray.forEach((j) => {
         if (i === j) {
-          error.push(i, j);
+          error.push(i);
         }
       });
     });
-    // console.log(error);
+    console.log(error);
     if (error.length > 0) {
       setErrorType(false);
-    } else if (accountPwd && accountEmail && error.length === 0) {
+    } else if (
+      accountPwd.length >= 6 &&
+      accountEmail.length >= 6 &&
+      error.length === 0
+    ) {
       setErrorType(true);
     } else {
       setErrorType(false);
@@ -39,8 +43,12 @@ const LoginButton = ({ accountPwd, accountEmail }) => {
           <span>請輸入帳密</span>
         ) : errorType ? (
           <span>格式正確</span>
+        ) : accountEmail.length < 6 ? (
+          <span>帳號請輸入六碼以上</span>
+        ) : accountPwd.length < 6 ? (
+          <span>密碼請輸入六碼以上</span>
         ) : (
-          <span>格式錯誤</span>
+          <span>密碼的任意連續 6 碼，不可以和帳號的任意連續 6 碼重複</span>
         )}
       </div>
     </>

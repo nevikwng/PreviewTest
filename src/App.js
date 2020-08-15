@@ -53,14 +53,14 @@ const App = () => {
         <div>Please fill out the form below to get started.</div>
       </div>
       <div className="AccountTypeInputContainer">
-        <AccountEmailInput
-          accountEmail={accountEmail}
-          setaccountEmail={setaccountEmail}
-        />
-        <AccountPassWordInput
-          accountPwd={accountPwd}
-          setaccountPwd={setaccountPwd}
-        />
+          <AccountEmailInput
+            accountEmail={accountEmail}
+            setaccountEmail={setaccountEmail}
+          />
+          <AccountPassWordInput
+            accountPwd={accountPwd}
+            setaccountPwd={setaccountPwd}
+          />
         <LoginButton accountEmail={accountEmail} accountPwd={accountPwd} />
         <div className="AccountTypeSingUP">
           No account ? <span>Sing Up</span>
